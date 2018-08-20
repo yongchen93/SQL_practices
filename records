@@ -6,3 +6,23 @@ SELECT name, population
 WHERE population BETWEEN 1000000 AND 1250000
  
  
+SELECT matchid,player FROM goal 
+  WHERE teamid = 'GER'
+  
+  
+  SELECT id,stadium,team1,team2
+  FROM game where id='1012'
+  
+  
+select team1,team2,player
+from game
+Join goal 
+on game.id=goal.matchid
+where goal.player like 'Mario%'
+
+
+select mdate,teamname
+from game
+join eteam
+on eteam.id = game.team1
+where eteam.coach = 'Fernando Santos'
